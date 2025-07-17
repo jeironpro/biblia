@@ -1,0 +1,36 @@
+.contenedor-testamento {
+    padding: 100px;
+}
+
+.contenedor-libros {
+    display: grid;
+    height: 100%;
+    gap: 10px;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 20px;
+}
+
+.contenedor-libros .libro {
+    align-items: center;
+    border-radius: 2px;
+    color: #FFF;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    padding: 10px;
+}
+
+#libros-at .libro {
+    background-color: #8B4513;
+}
+
+#libros-nt .libro {
+    background-color: #4B0082;
+}
+
+.contenedor-libros .libro a {
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+}
+

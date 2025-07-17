@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antiguo testamento</title>
+    <link rel="shortcut icon" href="icons/biblia.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/libros.css">
+</head>
+<body>
+    <header>
+        <h1>Antiguo testamento</h1>
+    </header>
+    <main class="contenedor-testamento">
+        <div class="contenedor-libros" id="libros-at"></div>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script>
+        const libros_at = [
+            {
+                "Pentateuco": ["Génesis", "Éxodo", "Levítico", "Números", "Deuteronomio"]
+            },
+            {
+                "Historicos": ["Josué", "Jueces", "Rut", "1 Samuel", "2 Samuel", "1 Reyes", "2 Reyes", "1 Crónicas", "2 Crónicas", "Esdras", "Nehemías", "Tobías", "Judit", "Ester", "1 Macabeos", "2 Macabeos"]
+            },
+            {
+                "PoeteicosYSapienciales": ["Job", "Salmos", "Proverbios", "Eclesiastés", "Cantar de los Cantares", "Sabiduría", "Eclesiástico"]
+            },
+            {
+                "Profeticos": ["Isaías", "Jeremías", "Lamentaciones", "Baruc", "Ezequiel", "Daniel", "Oseas", "Joel", "Amós", "Adbías", "Jonás", "Miqueas", "Nahúm", "Habacuc", "Sofonías", "Ageo", "Zacarías", "Malaquías"]
+            }
+        ];
+
+        const contenedorLibrosAt = document.getElementById("libros-at");
+
+        libros_at.forEach(secciones => {
+            for (const [clave, lista] of Object.entries(secciones)) {
+                lista.forEach(libro_at => {
+                    const libro = document.createElement("div");
+                    libro.classList.add("libro");
+                    libro.innerHTML = `<a href="/html/antiguo_testamento/${libro_at.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '')}.html">${libro_at}</a>`;
+                    contenedorLibrosAt.appendChild(libro);
+                });
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.contenedor-inicio {
+    flex: 1;
+}
+
+.contenedor-principal {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contenedor-principal .card {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+.contenedor-principal .card:nth-child(1) {
+    background-color: #8B4513;
+}
+
+.contenedor-principal .card:nth-child(2) {
+    background-color: #4B0082;
+}
+
+.contenedor-principal .card a {
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1);
+    color: #FFF;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.contenedor-principal .card a:hover {
+    transform: scale(1.1);
+}

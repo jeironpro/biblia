@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Pedro</title>
+    <link rel="shortcut icon" href="../../icons/biblia.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/capitulos.css">
+</head>
+<body>
+    <header>
+        <h1>1 Pedro</h1>
+    </header>
+    <main>
+        <div class="capitulos-nt" id="capitulos"></div>
+    </main>
+    <footer>
+        &copy; Todos los derechos reservados 2025 - JeironPro
+    </footer>
+    <script>
+        const contenedorCapitulos = document.getElementById("capitulos");
+
+        for (let i = 1; i <= 5; i++) {
+            const capitulo = document.createElement("div");
+            capitulo.classList.add("capitulo");
+            capitulo.textContent = i;
+            capitulo.innerHTML = `<a href="1pedro/1pedro_${i}.html">${i}</a>`;
+            contenedorCapitulos.appendChild(capitulo);
+        }
+    </script>
+</body>
+</html>

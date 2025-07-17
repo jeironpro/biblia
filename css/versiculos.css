@@ -1,0 +1,17 @@
+body {
+    background-color: #f5eedb; 
+}
+
+main {
+    padding: 100px;
+}
+
+pre {
+    border-radius: 8px; 
+    font-family: 'Courier New', monospace; 
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6; 
+    padding: 1em; 
+    white-space: pre-wrap;
+}

@@ -1,0 +1,34 @@
+main {
+    padding: 100px;
+}
+
+#capitulos {
+    display: grid;
+    height: 100%;
+    gap: 10px;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 20px;
+}
+
+.capitulos-at .capitulo {
+    background-color: #8B4513;
+}
+
+.capitulos-nt .capitulo {
+    background-color: #4B0082;
+}
+
+.capitulo {
+    align-items: center;
+    border-radius: 2px;
+    color: #FFF;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.capitulo a {
+    color: #FFF;
+    text-decoration: none;
+}
