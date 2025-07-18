@@ -1,5 +1,5 @@
 main {
-    padding: 100px;
+    padding: 50px 20px 80px 20px;
 }
 
 #capitulos {
@@ -31,4 +31,27 @@ main {
 .capitulo a {
     color: #FFF;
     text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    #capitulos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .capitulo {
+        height: 80px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #capitulos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .capitulo {
+        height: 60px;
+        font-size: 14px;
+        padding: 6px;
+    }
 }
