@@ -42,7 +42,7 @@
                 lista.forEach(libro_at => {
                     const libro = document.createElement("div");
                     libro.classList.add("libro");
-                    libro.innerHTML = `<a href="/html/antiguo_testamento/${libro_at.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '')}.html">${libro_at}</a>`;
+                    libro.innerHTML = `<a href="html/antiguo_testamento/${libro_at.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '')}.html">${libro_at}</a>`;
                     contenedorLibrosAt.appendChild(libro);
                 });
             };
