@@ -1,5 +1,6 @@
 * {
     font-family: "Fredoka", sans-serif;
+    user-select: none;
 }
 
 body {

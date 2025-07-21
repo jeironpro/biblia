@@ -11,13 +11,8 @@
 }
 
 .contenedor-libros .libro {
-    align-items: center;
-    border-radius: 2px;
-    color: #FFF;
-    display: flex;
+    cursor: pointer;
     height: 100px;
-    justify-content: center;
-    padding: 10px;
 }
 
 #libros-at .libro {
@@ -29,8 +24,12 @@
 }
 
 .contenedor-libros .libro a {
+    align-items: center;
+    border-radius: 2px;
     color: #FFF;
-    text-align: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
     text-decoration: none;
 }
 
