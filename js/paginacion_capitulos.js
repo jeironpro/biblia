@@ -73,3 +73,45 @@ const libros = [
     {"nombre": "judas", "capitulos": 1},
     {"nombre": "apocalipsis", "capitulos": 22}
 ]
+const ruta = window.location.pathname.toLowerCase();
+const partes = ruta.split('/');
+const nombreLibro = partes[partes.length - 2]; // carpeta del libro
+const archivo = partes[partes.length - 1];     // ej: genesis_3.html
+const capituloActual = parseInt(archivo.replace('.html', '').split('_')[1]);
+
+const indiceLibro = libros.findIndex(l => l.nombre === nombreLibro);
+const libro = libros[indiceLibro];
+
+const btnAnterior = document.getElementById("anterior");
+const btnSiguiente = document.getElementById("siguiente");
+const libroSpan = document.getElementById("libro-actual");
+
+function irA(libroNombre, capitulo) {
+    window.location.href = `../${libroNombre}/${libroNombre}_${capitulo}.html`;
+}
+
+function actualizarUI() {
+    if (libroSpan) libroSpan.textContent = `${libro.nombre} ${capituloActual}`;
+
+    // Anterior
+    if (capituloActual > 1) {
+        btnAnterior.onclick = () => irA(libro.nombre, capituloActual - 1);
+    } else if (indiceLibro > 0) {
+        const anterior = libros[indiceLibro - 1];
+        btnAnterior.onclick = () => irA(anterior.nombre, anterior.capitulos);
+    } else {
+        btnAnterior.disabled = true;
+    }
+
+    // Siguiente
+    if (capituloActual < libro.capitulos) {
+        btnSiguiente.onclick = () => irA(libro.nombre, capituloActual + 1);
+    } else if (indiceLibro < libros.length - 1) {
+        const siguiente = libros[indiceLibro + 1];
+        btnSiguiente.onclick = () => irA(siguiente.nombre, 1);
+    } else {
+        btnSiguiente.disabled = true;
+    }
+}
+
+actualizarUI();
